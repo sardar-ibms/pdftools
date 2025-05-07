@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free PDF to Office Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.16.0/pdf-lib.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Free PDF to Office Converter</h1>
+            <p>Convert PDFs to Word (DOCX), Excel (XLSX), or PowerPoint (PPTX) - 100% free in your browser</p>
+        </header>
+
+        <div class="converter-box">
+            <div class="drop-zone" id="dropZone">
+                <span class="drop-zone__prompt">Drop PDF file here or click to upload</span>
+                <input type="file" id="fileInput" class="drop-zone__input" accept=".pdf">
+            </div>
+
+            <div class="options">
+                <div class="format-selector">
+                    <label>Output Format:</label>
+                    <select id="outputFormat">
+                        <option value="docx">Word (DOCX)</option>
+                        <option value="xlsx">Excel (XLSX)</option>
+                        <option value="pptx">PowerPoint (PPTX)</option>
+                    </select>
+                </div>
+
+                <div class="advanced-options">
+                    <h3>Advanced Options</h3>
+                    <div class="option-group">
+                        <input type="checkbox" id="preserveLayout">
+                        <label for="preserveLayout">Preserve original layout</label>
+                    </div>
+                    <div class="option-group">
+                        <input type="checkbox" id="extractImages">
+                        <label for="extractImages">Extract images separately</label>
+                    </div>
+                    <div class="option-group">
+                        <label for="imageQuality">Image Quality:</label>
+                        <input type="range" id="imageQuality" min="1" max="10" value="7">
+                        <span id="qualityValue">7</span>
+                    </div>
+                </div>
+            </div>
+
+            <button id="convertBtn" class="btn">Convert Now</button>
+            <div class="progress-container" id="progressContainer">
+                <div class="progress-bar" id="progressBar"></div>
+                <span class="progress-text" id="progressText">0%</span>
+            </div>
+        </div>
+
+        <div class="features">
+            <h2>Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>Privacy Focused</h3>
+                    <p>Files never leave your browser - no server processing means complete privacy.</p>
+                </div>
+                <div class="feature">
+                    <h3>Multiple Formats</h3>
+                    <p>Convert to Word, Excel, or PowerPoint with a single click.</p>
+                </div>
+                <div class="feature">
+                    <h3>Advanced Options</h3>
+                    <p>Customize your conversion with layout preservation and image extraction.</p>
+                </div>
+                <div class="feature">
+                    <h3>Free Forever</h3>
+                    <p>No watermarks, no subscriptions, no hidden costs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2023 Free PDF Converter | Powered by PDF-lib and LibreOffice WASM</p>
+    </footer>
+</body>
+</html>
